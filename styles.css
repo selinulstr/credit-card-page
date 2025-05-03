@@ -1,0 +1,307 @@
+body {
+    background-color: #e4e1e1;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 5%;
+    padding: 0;
+}
+
+h6, h5, h4, h2, p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+hr {
+    width: 100%;
+    margin: 0;
+    background-color: #dddddd; 
+    height: 1px;
+    border: 0;
+    
+
+}
+
+.quantity-div {
+    display: flex;
+}
+
+.quantity-div :first-child:hover {
+    color: #3795BD;
+}
+
+.quantity-div :last-child:hover {
+    color: red;
+}
+
+.quantity {
+    border: 1px solid #dddddd;
+    font-size: 1.25rem;
+    width: 1.5rem;
+    text-align: center;
+}
+
+.main {
+    
+    background-color: #fff;
+    border-radius: 50px;
+    display: flex;
+    gap: 2.5rem;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    position: relative;
+    left: 10%;
+}
+
+
+.left {
+    
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: flex-start;
+}
+
+.right {
+    padding: 3%;
+    background-color: #4E31AA;
+    border-radius: 50px;
+    width: 25%;   
+    color: white;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sort {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-cart {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    font-size: 1.5rem;
+    box-shadow: 5px 5px 5px 5px #b6b6b6;
+    border-radius: 10px;
+}
+
+.item-right {
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.img-div {
+    margin: 10px;
+    padding: 4px 7px;
+    border-radius: 10px;
+    background-color: #3795BD;
+}
+.product-img {
+    position: relative;
+    top: 3px;
+
+}
+
+button {
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.delete {
+    font-weight: 600;
+    padding-right: 20px;
+}
+
+.delete:hover {
+    color: red;
+}
+
+
+.card-type {
+    display: flex;
+    gap: 0.94rem;
+}
+
+input {
+    height: 2.5rem;
+    width: 98%;
+    background-color: #8669e7; 
+    border: none;
+    border-radius: 10px;
+    padding-left: 10px;
+    color: white;
+}
+
+::placeholder {
+   
+    color: white;
+  }
+
+input:focus {
+    outline: 1px solid white;
+}
+
+input[name="cvv"], input[name="month"] {
+    width: 96%;
+}
+
+
+input[type="checkbox"] {
+    display: none;
+    margin: 0;
+
+}
+
+label {
+    border: 1px solid transparent;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+  }
+
+.type-label {
+    margin-top: 3px;
+    border: 2px solid #8669e7;
+    border-radius: 10px;
+}
+  
+label:before {
+    background-color: white;
+    color: #4E31AA;
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    border: 2px solid white;
+    position: absolute;
+    left: 64%;
+    top: 6%;
+    width: 17px;
+    height: 17px;
+    text-align: center;
+    transition-duration: 0.3s;
+    transform: scale(0);
+  }
+  
+:checked + label {
+    border: 2px solid white;
+    border-color: white;
+  }
+  
+:checked + label:before {
+  
+    content: "✔";
+    transform: scale(1);
+  }
+  
+  .button-div {
+    
+    width: 100%;
+}
+.checkout-button {
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    background-color: #3795BD;
+    height: 3rem;
+    width: 100%;
+    color: white;
+    cursor: pointer;
+}
+
+.checkout-button:hover {
+    opacity: 0.5;
+}
+
+.right hr {
+    background-color: #8669e7; 
+    height: 1px;
+    border: 0;
+}
+
+
+
+.expir {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+
+
+
+.price-right {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+@media (max-width: 680px) {
+    body { font-size: 1rem;}
+
+    .main {
+        flex-direction: column;   
+        height: max-content;
+        width: 100%;
+        left: 1%;
+        gap: 4rem;
+        padding: 1rem 0;
+}
+    .left {
+        width: 90%;
+        gap: auto;
+    }
+
+    .item-cart {
+        gap: 0;
+        font-size: 1rem;
+       
+    }
+    .right {
+        width: 60%;
+        padding: 5%;
+        
+    }
+
+    .card-type {
+        display: flex;
+        gap: auto;
+        justify-content: center;
+    }
+    svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .expir {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .item-right {
+        gap: 1rem;
+        
+    }
+}
+    
